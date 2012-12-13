@@ -63,3 +63,20 @@ setopt CORRECT CORRECT_ALL
 
 # Enable extended globbing
 setopt EXTENDED_GLOB
+
+# Set path
+for dir in \
+  /usr/local/sbin \
+  /usr/local/bin \
+  /usr/sbin \
+  /usr/bin \
+  /sbin \
+  /bin \
+  /usr/games
+; do
+  if [[ -d $dir ]]; then path+=$dir; fi
+done
+
+# RVM
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
+
