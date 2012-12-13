@@ -10,6 +10,7 @@ set ruler         " show the cursor position all the time
 set showcmd       " display incomplete commands
 set incsearch     " do incremental searching
 set laststatus=2  " Always display the status line
+set hidden
 
 " Switch syntax highlighting on, when the terminal has colors
 " Also switch on highlighting the last used search pattern.
@@ -40,6 +41,7 @@ Bundle 'vim-scripts/ctags.vim'
 Bundle 'vim-scripts/greplace.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'xenoterracide/html.vim'
+Bundle 'scrooloose/nerdtree'
 
 filetype plugin indent on
 
@@ -77,7 +79,7 @@ if executable("ack")
 endif
 
 " Color scheme
-colorscheme github
+" colorscheme github
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
@@ -87,6 +89,10 @@ set numberwidth=5
 
 " Snippets are activated by Shift+Tab
 let g:snippetsEmu_key = "<S-Tab>"
+
+" NERDTree
+autocmd vimenter * NERDTree | wincmd l
+autocmd vimenter * if !argc() | NERDTree | wincmd l | endif
 
 " Tab completion
 " will insert tab at beginning of line,
