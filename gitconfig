@@ -1,3 +1,9 @@
+[user]
+	name = Lucas Wilson-Richter
+	email = lucasr@pageuppeople.com
+[branch "master"]
+	remote = origin
+	merge = refs/heads/master
 [push]
   default = tracking
 [color]
