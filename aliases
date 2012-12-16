@@ -12,8 +12,9 @@ alias -g L='| wc -l'
 alias -g ONE="| awk '{ print \$1}'"
 
 # git
-alias g="git"
-alias gci="git pull --rebase && rake && git push"
+alias g="hub"
+alias git="hub"
+alias gci="hub pull --rebase && rake && hub push"
 
 # Bundler
 alias b="bundle"
@@ -44,3 +45,7 @@ alias production-tail='heroku logs --tail --remote production'
 # Heroku databases
 alias db-backup-production='heroku pgbackups:capture --remote production'
 alias db-copy-production-to-staging='heroku pgbackups:restore DATABASE `heroku pgbackups:url --remote production` --remote staging  --confirm `basename $PWD`-staging'
+
+# Create Pow app
+alias make-pow='ln -s $PWD ~/.pow/${PWD##*/}'
+
