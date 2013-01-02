@@ -42,6 +42,7 @@ Bundle 'vim-scripts/greplace.vim'
 Bundle 'vim-scripts/tComment'
 Bundle 'xenoterracide/html.vim'
 Bundle 'scrooloose/nerdtree'
+Bundle 'tpope/vim-bundler'
 
 filetype plugin indent on
 
