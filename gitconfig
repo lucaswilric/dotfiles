@@ -1,9 +1,12 @@
 [user]
-	name = Lucas Wilson-Richter
-	email = lucasr@pageuppeople.com
+  name = Lucas Wilson-Richter
+  email = da.maestro@gmail.com
+
+# DO NOT EDIT BELOW THIS LINE
+
 [branch "master"]
-	remote = origin
-	merge = refs/heads/master
+  remote = origin
+  merge = refs/heads/master
 [push]
   default = tracking
 [color]
