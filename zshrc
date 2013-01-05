@@ -72,7 +72,8 @@ for dir in \
   /usr/bin \
   /sbin \
   /bin \
-  /usr/games
+  /usr/games \
+  ~/bin
 ; do
   if [[ -d $dir ]]; then path+=$dir; fi
 done
