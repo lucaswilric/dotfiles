@@ -10,4 +10,5 @@ tmp/**/*
 !tmp/cache/.keep
 vendor/bundler_gems
 vim/.netrwhist
+vim/bundle/mustache.vim
 zeus.json
