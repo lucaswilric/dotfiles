@@ -81,3 +81,12 @@ done
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
 
+# Prompt
+autoload -U colors && colors
+
+parse_git_branch () {
+  git branch 2> /dev/null | grep "*" | sed -e 's/* \(.*\)/ (\1)/g'
+}
+
+PS1="%{$fg[yellow]%}[%~]%{$fg[green]%}[$(parse_git_branch)] %{$reset_color%}% "
+
