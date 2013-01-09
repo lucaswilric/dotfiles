@@ -38,7 +38,7 @@ bindkey -s "^T" "^[Isudo ^[A" # "t" for "toughguy"
 setopt prompt_subst
 
 # prompt
-export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
+#export PS1='[${SSH_CONNECTION+"%n@%m:"}%~] '
 
 # ignore duplicate history entries
 setopt histignoredups
@@ -73,20 +73,12 @@ for dir in \
   /sbin \
   /bin \
   /usr/games \
-  ~/bin
+  ~/bin \
+  ~/todo
 ; do
   if [[ -d $dir ]]; then path+=$dir; fi
 done
 
 # RVM
 [[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
-# Prompt
-autoload -U colors && colors
-
-parse_git_branch () {
-  git branch 2> /dev/null | grep "*" | sed -e 's/* \(.*\)/ (\1)/g'
-}
-
-PS1="%{$fg[yellow]%}[%~]%{$fg[green]%}$(parse_git_branch) %{$reset_color%}% "
 
