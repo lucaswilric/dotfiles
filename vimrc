@@ -44,6 +44,7 @@ Bundle 'xenoterracide/html.vim'
 Bundle 'scrooloose/nerdtree'
 Bundle 'tpope/vim-bundler'
 Bundle 'juvenn/mustache.vim'
+Bundle 'kien/ctrlp.vim'
 
 filetype plugin indent on
 
