@@ -48,6 +48,8 @@ Bundle 'kien/ctrlp.vim'
 
 filetype plugin indent on
 
+au BufNewFile,BufRead Vagrantfile set filetype=ruby
+
 augroup vimrcEx
   au!
 
@@ -82,7 +84,7 @@ if executable("ack")
 endif
 
 " Color scheme
-" colorscheme github
+colorscheme koehler
 highlight NonText guibg=#060606
 highlight Folded  guibg=#0A0A0A guifg=#9090D0
 
