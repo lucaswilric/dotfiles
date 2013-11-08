@@ -66,17 +66,16 @@ setopt EXTENDED_GLOB
 
 # Set path
 for dir in \
-  /usr/local/sbin \
-  /usr/local/bin \
-  /usr/sbin \
-  /usr/bin \
-  /sbin \
-  /bin \
-  /usr/games \
   ~/bin \
-  ~/todo
+  /usr/games \
+  /bin \
+  /sbin \
+  /usr/bin \
+  /usr/sbin \
+  /usr/local/bin \
+  /usr/local/sbin
 ; do
-  if [[ -d $dir ]]; then path+=$dir; fi
+  if [[ -d $dir ]]; then PATH=$dir:$PATH; fi
 done
 
 # RVM
@@ -122,3 +121,5 @@ setopt prompt_subst
 # prompt
 export PS1='$(git_prompt_info)[${SSH_CONNECTION+"%{$fg_bold[green]%}%n@%m:"}%{$fg_bold[blue]%}%~%{$reset_color%}] '
 
+# Fix for rvm + tmux + zsh
+[[ $TERM = "screen" ]] && rvm use default
