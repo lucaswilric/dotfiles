@@ -96,8 +96,8 @@ set numberwidth=5
 let g:snippetsEmu_key = "<S-Tab>"
 
 " NERDTree
-autocmd vimenter * NERDTree | wincmd l
-autocmd vimenter * if !argc() | NERDTree | wincmd l | endif
+"autocmd vimenter * NERDTree | wincmd l
+"autocmd vimenter * if !argc() | NERDTree | wincmd l | endif
 
 " Tab completion
 " will insert tab at beginning of line,
